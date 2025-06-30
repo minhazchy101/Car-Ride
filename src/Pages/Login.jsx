@@ -75,7 +75,7 @@ navigate(location.state || '/')
     return (
         <>
           <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-secondary my-2">
-	<h1 className="text-3xl font-bold text-primary text-center">Login</h1>
+	<h1 className="text-3xl font-bold text-primary text-center">Login Now</h1>
 	
 
     <form onSubmit={handleLogin} className="form rounded-box ">

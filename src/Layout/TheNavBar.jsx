@@ -36,6 +36,7 @@ const TheNavBar = () => {
       icon: "success"
     });
 }).catch((error) => {
+  // console.log(error)
   if (error) {
     Swal.fire({
     icon: "error",
