@@ -16,6 +16,7 @@ import axios from "axios";
 import CarDetails from "../Pages/CarDetails";
 import Loading from "../Others/Loading";
 import MyBookings from "../Pages/MyBookings";
+import AllCars from "../Pages/AllCars";
 
 
 export const router = createBrowserRouter([
@@ -57,6 +58,12 @@ export const router = createBrowserRouter([
     {
       path : 'bookedCars/:email' ,
       element : <Private><MyBookings></MyBookings></Private>,
+    },
+    {
+      path : 'allCars' ,
+      element : <Private><AllCars></AllCars></Private>,
+      loader : ()=> axios('https://car-ride-server.vercel.app/addcar').then(res => res.data),
+    hydrateFallbackElement : <Loading></Loading> 
     }
    ]
   },

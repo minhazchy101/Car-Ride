@@ -64,6 +64,7 @@ const TheNavBar = () => {
         <li><NavLink className={({isActive}) => isActive ? 'text-[#00C2FF] font-bold underline underline-offset-8 underline-[#00C2FF] ' : 'text-[#FFFFFF] font-semibold text-md'} to='/addCar'>Add Car </NavLink></li>
         {
           user && <>
+          <li><NavLink className={({isActive}) => isActive ? 'text-[#00C2FF] font-bold underline underline-offset-8 underline-[#00C2FF] ' : 'text-[#FFFFFF] font-semibold text-md'} to='allCars'>All Cars </NavLink></li>
           <li><NavLink className={({isActive}) => isActive ? 'text-[#00C2FF] font-bold underline underline-offset-8 underline-[#00C2FF] ' : 'text-[#FFFFFF] font-semibold text-md'} to={`/myCars/${user.email}`}>My Cars </NavLink></li>
           <li><NavLink className={({isActive}) => isActive ? 'text-[#00C2FF] font-bold underline underline-offset-8 underline-[#00C2FF] ' : 'text-[#FFFFFF] font-semibold text-md'} to={`/bookedcars/${user.email}`}>My Bookings</NavLink></li>
           
@@ -71,7 +72,7 @@ const TheNavBar = () => {
         }
         </>
     return (
-        <div className='bg-[#1A1F36] shadow-lg sticky top-0 z-50'>
+        <div className='bg-secondary shadow-lg sticky top-0 z-50'>
      <div className="navbar w-full md:w-10/12 mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
