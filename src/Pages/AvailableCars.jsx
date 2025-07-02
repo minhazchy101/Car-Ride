@@ -76,7 +76,7 @@ const AvailableCars = () => {
 
       {/* Grid View */}
       {myView === 'Grid' ? (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-4 px-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-4 px-4 md:px-0'>
           {sortedCars.map(car => (
             <div key={car._id} className="card bg-secondary shadow-lg rounded-lg">
               <figure>
