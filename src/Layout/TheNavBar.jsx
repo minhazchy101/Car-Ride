@@ -69,10 +69,10 @@ const TheNavBar = () => {
           <li><NavLink className={({isActive}) => isActive ? 'text-[#00C2FF] font-bold underline underline-offset-8 underline-[#00C2FF] ' : 'text-[#FFFFFF] font-semibold text-md'} to={`/bookedcars/${user.email}`}>My Bookings</NavLink></li>
           
           </>
-        }
+        } 
         </>
     return (
-        <div className='bg-secondary shadow-lg sticky top-0 z-50'>
+        <div className='bg-[#1A1F36] shadow-lg sticky top-0 z-50'>
      <div className="navbar w-full md:w-10/12 mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
@@ -99,7 +99,7 @@ const TheNavBar = () => {
                   </div>
                   <span className="text-white">{user?.displayName}</span>
                 </div>
-                <button onClick={handleLogOut} className="btn btn-sm btn-outline btn-primary w-full mt-2">LogOut</button>
+                <button onClick={handleLogOut} className="btn btn-sm btn-outline btn-[#00C4FF] w-full mt-2">LogOut</button>
               </>
             ) : (
               <>
@@ -108,7 +108,7 @@ const TheNavBar = () => {
                     <img src="https://i.ibb.co/qFWd7DTV/istockphoto-1270368615-612x612.jpg" alt="guest" />
                   </div>
                 </div>
-                <NavLink to='/login' className="btn btn-sm btn-outline btn-primary w-full mt-2">Login</NavLink>
+                <NavLink to='/login' className="btn btn-sm btn-outline btn-[#00C4FF] w-full mt-2">Login</NavLink>
               </>
             )
           }
@@ -140,21 +140,21 @@ const TheNavBar = () => {
                   <img src={user?.photoURL} alt="user" />
                 </div>
               </div>
-              <div className="text-md font-semibold mt-6 opacity-0 bg-base-100 text-primary rounded-box shadow p-2 w-32 text-center group-hover:opacity-100 transition-opacity duration-200 absolute right-2.5">
+              <div className="text-md font-semibold mt-6 opacity-0 bg-base-100 text-[#00C4FF] rounded-box shadow p-2 w-32 text-center group-hover:opacity-100 transition-opacity duration-200 absolute right-2.5">
                 {user?.displayName}
               </div>
             </div>
-            <button onClick={handleLogOut} className="btn btn-outline btn-primary text-[#FFFFFF] font-semibold text-md">LogOut</button>
+            <button onClick={handleLogOut} className="btn btn-outline btn-[#00C4FF] text-[#FFFFFF] font-semibold text-md">LogOut</button>
           </div>
         </>
       ) : (
         <>
           <div className="avatar">
-            <div className="w-14 rounded-full mx-3">
+            <div className="w-16 rounded-full mx-3">
               <img src="https://i.ibb.co/qFWd7DTV/istockphoto-1270368615-612x612.jpg" alt="guest" />
             </div>
           </div>
-          <NavLink to='/login' className="btn btn-outline btn-primary text-[#FFFFFF] font-semibold text-md">Login</NavLink>
+          <NavLink to='/login' className="btn btn-outline btn-[#00C4FF] text-[#FFFFFF] font-semibold text-md">Login</NavLink>
         </>
       )
     }

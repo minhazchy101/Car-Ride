@@ -27,11 +27,11 @@ const MyCars = () => {
     
     
     return (
-        <div className="w-full lg:max-w-8/10 mx-auto my-2 ">
+        <div className="w-full lg:max-w-8/10 mx-auto my-2 min-h-[70vh] ">
         
         {
           onlyMyCars?.length === 0 ? (
-  <div className="text-center py-10 text-accent bg-secondary rounded-xl">
+  <div className="text-center py-10 text-accent bg-secondary rounded-xl h-full my-3 items-center">
     <p className="text-lg mb-4">You haven't added any cars yet.</p>
     <Link to="/addCar" className="btn btn-primary text-accent btn-outline rounded-lg">
       Add Your First Car

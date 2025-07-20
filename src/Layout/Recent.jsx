@@ -23,7 +23,7 @@ const Recent = () => {
 
   const onlyAvailableCars = loadedCar?.filter(car => car.availability === 'Available') || [];
   const sortedCars = onlyAvailableCars.sort((a, b) => new Date(b.date) - new Date(a.date));
-  const recentCars = sortedCars.slice(0, 6);
+  const recentCars = sortedCars.slice(0, 8);
 
   return (
     <div className='w-full md:w-10/12 mx-auto my-8'>
@@ -36,17 +36,17 @@ const Recent = () => {
           <span className="loading loading-spinner loading-lg text-primary"></span>
         </div>
       ) : (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-0'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-0'>
           {recentCars.map(car => (
             <div
               key={car?._id}
               className="card bg-secondary text-accent shadow-md rounded-lg transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl"
             >
-              <figure className="h-[250px] overflow-hidden rounded-t-lg">
+              <figure >
                 <img
                   src={car?.Imageurl}
                   alt={car?.CarModel}
-                  className='object-cover w-full h-full'
+                  className='object-cover h-48 w-full rounded-t-lg'
                 />
               </figure>
               <div className="card-body">
