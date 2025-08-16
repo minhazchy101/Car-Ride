@@ -144,7 +144,7 @@ const TheNavBar = () => {
                 {user?.displayName}
               </div>
             </div>
-            <button onClick={handleLogOut} className="btn btn-outline btn-[#00C4FF] text-[#FFFFFF] font-semibold text-md">LogOut</button>
+            <button onClick={handleLogOut} className="btn btn-outline btn-primary text-[#FFFFFF] font-semibold text-md">LogOut</button>
           </div>
         </>
       ) : (
@@ -154,7 +154,7 @@ const TheNavBar = () => {
               <img src="https://i.ibb.co/qFWd7DTV/istockphoto-1270368615-612x612.jpg" alt="guest" />
             </div>
           </div>
-          <NavLink to='/login' className="btn btn-outline btn-[#00C4FF] text-[#FFFFFF] font-semibold text-md">Login</NavLink>
+          <NavLink to='/login' className="btn btn-outline btn-primary text-[#FFFFFF] font-semibold text-md">Login</NavLink>
         </>
       )
     }
